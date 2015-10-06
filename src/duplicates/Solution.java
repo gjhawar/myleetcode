@@ -8,28 +8,10 @@ import java.util.*;
 public class Solution {
 
     public boolean containsDuplicate(int[] nums) {
-
-        HashMap<Integer, Integer> countMap = new HashMap<Integer, Integer>();
-        for(Integer i : nums){
-            if(countMap.get(i) == null)
-            {
-                countMap.put(i,1);
-            }
-            else{
-                countMap.put(i, countMap.get(i) + 1);
-            }
+        HashSet<Integer> set = new HashSet<Integer>();
+        for( int i : nums){
+            set.add(i);
         }
-
-        Set<Integer> keyset = countMap.keySet();
-        Iterator<Integer> itr = keyset.iterator();
-        boolean hasDuplicate = false;
-        while(itr.hasNext()){
-            Integer key = itr.next();
-            if(countMap.get(key)>1){
-                hasDuplicate = true;
-                break;
-            }
-        }
-        return hasDuplicate == true;
+        return set.size() < nums.length ? true : false;
     }
 }

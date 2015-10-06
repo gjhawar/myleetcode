@@ -12,15 +12,7 @@ public class Solution {
     is >1 in that case we recursively call the addDigits function until we have a single digit number left.
      */
     public int addDigits(int num) {
-        int count = 0;
-        for(int i = (int)Math.log10(num); i>=0; i--){
-            count += num/(int)Math.pow(10, i);
-            num = num % (int)Math.pow(10, i);
-            System.out.println();
-        }
-        if((int)(Math.log10(count) + 1) > 1)
-            count = addDigits(count);
-        return count;
+        return (num<10)?num:((num-1)%9)+1;
     }
 
     public static void main(String args[]){
