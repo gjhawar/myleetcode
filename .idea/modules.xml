@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaInterview.iml" filepath="$PROJECT_DIR$/JavaInterview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyDS/MyDS.iml" filepath="$PROJECT_DIR$/MyDS/MyDS.iml" />
     </modules>
   </component>
 </project>
